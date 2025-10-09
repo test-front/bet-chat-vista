@@ -1,23 +1,21 @@
-import { Moon, Sun, Bot, GraduationCap, PanelLeftOpen } from "lucide-react";
+import { Moon, Sun, Bot, GraduationCap, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
-import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 const ChatHeader = () => {
   const { theme, setTheme } = useTheme();
-  const { open, openMobile } = useSidebar();
 
   return (
     <header className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95">
-      {!open && !openMobile && (
-        <SidebarTrigger className="fixed left-4 top-20 z-50 group">
-          <div className="p-3 bg-gradient-primary rounded-full shadow-glow hover:shadow-xl transition-all duration-300 hover:scale-110 border-2 border-primary/20">
-            <PanelLeftOpen className="w-5 h-5 text-primary-foreground group-hover:animate-pulse" />
-          </div>
-        </SidebarTrigger>
-      )}
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
+          <SidebarTrigger asChild>
+            <Button variant="ghost" size="icon" className="hover:bg-muted transition-colors">
+              <Menu className="h-5 w-5" />
+            </Button>
+          </SidebarTrigger>
+          
           <div className="relative p-2 bg-gradient-primary rounded-lg shadow-glow">
             <Bot className="w-6 h-6 text-primary-foreground" />
             <GraduationCap className="absolute -top-1 -right-0.5 w-4 h-4 text-primary-foreground" />
