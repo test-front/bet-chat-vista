@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import ChatHeader from "@/components/ChatHeader";
 import ChatContainer from "@/components/ChatContainer";
+import { AppSidebar } from "@/components/AppSidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 const Index = () => {
   useEffect(() => {
@@ -15,10 +17,15 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen bg-background overflow-hidden">
-      <ChatHeader />
-      <ChatContainer />
-    </div>
+    <SidebarProvider>
+      <div className="flex min-h-screen w-full bg-background">
+        <AppSidebar />
+        <div className="flex flex-col flex-1 overflow-hidden">
+          <ChatHeader />
+          <ChatContainer />
+        </div>
+      </div>
+    </SidebarProvider>
   );
 };
 
