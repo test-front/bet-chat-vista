@@ -13,8 +13,8 @@ const ChatHeader = () => {
             <Trophy className="w-6 h-6 text-primary-foreground" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-foreground">BetAssist</h1>
-            <p className="text-xs text-muted-foreground">Seu assistente de apostas</p>
+            <h1 className="text-xl font-bold text-foreground">Almanaque Bot</h1>
+            <p className="text-xs text-muted-foreground">Seu assistente de apostas esportivas</p>
           </div>
         </div>
         
