@@ -1,7 +1,6 @@
-import { Moon, Sun, Bot, GraduationCap, Menu } from "lucide-react";
+import { Moon, Sun, Bot, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 
 const ChatHeader = () => {
   const { theme, setTheme } = useTheme();
@@ -10,12 +9,6 @@ const ChatHeader = () => {
     <header className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <SidebarTrigger asChild>
-            <Button variant="ghost" size="icon" className="hover:bg-muted transition-colors">
-              <Menu className="h-5 w-5" />
-            </Button>
-          </SidebarTrigger>
-          
           <div className="relative p-2 bg-gradient-primary rounded-lg shadow-glow">
             <Bot className="w-6 h-6 text-primary-foreground" />
             <GraduationCap className="absolute -top-1 -right-0.5 w-4 h-4 text-primary-foreground" />
