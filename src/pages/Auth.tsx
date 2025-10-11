@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { Trophy, Mail, Lock, User } from "lucide-react";
-import mascote from "@/assets/mascote.jpg";
+
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -51,47 +51,23 @@ const Auth = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
       </div>
 
-      <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
-        {/* Left side - Branding */}
-        <div className="flex-1 text-center lg:text-left space-y-6 animate-fade-in">
-          <div className="inline-flex items-center gap-3 text-primary mb-4">
+      <div className="w-full max-w-md mx-auto relative z-10 space-y-8 animate-fade-in">
+        {/* Title */}
+        <div className="text-center space-y-4">
+          <div className="inline-flex items-center gap-3 text-primary justify-center">
             <Trophy className="w-12 h-12" />
-            <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               Almanaque Bot
             </h1>
           </div>
           
-          <p className="text-xl text-muted-foreground max-w-md mx-auto lg:mx-0">
+          <p className="text-lg text-muted-foreground">
             Análise inteligente de apostas esportivas com IA
           </p>
-
-          <div className="hidden lg:block">
-            <img 
-              src={mascote} 
-              alt="Almanaque Bot Mascote" 
-              className="w-80 h-80 object-contain mx-auto lg:mx-0 drop-shadow-2xl animate-fade-in"
-              style={{ animationDelay: "0.2s" }}
-            />
-          </div>
-
-          <div className="flex flex-wrap gap-4 justify-center lg:justify-start text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span>Análise em tempo real</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span>Histórico completo</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span>Estratégias personalizadas</span>
-            </div>
-          </div>
         </div>
 
-        {/* Right side - Auth forms */}
-        <div className="w-full lg:w-auto lg:min-w-[450px] animate-fade-in" style={{ animationDelay: "0.3s" }}>
+        {/* Auth forms */}
+        <div className="w-full">
           <Tabs defaultValue="login" className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-6">
               <TabsTrigger value="login" className="text-base">Entrar</TabsTrigger>
