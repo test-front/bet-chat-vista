@@ -69,9 +69,9 @@ const Auth = () => {
         {/* Auth forms */}
         <div className="w-full">
           <Tabs defaultValue="login" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-6">
-              <TabsTrigger value="login" className="text-base">Entrar</TabsTrigger>
-              <TabsTrigger value="signup" className="text-base">Cadastrar</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 mb-6 h-12">
+              <TabsTrigger value="login" className="text-base h-10">Entrar</TabsTrigger>
+              <TabsTrigger value="signup" className="text-base h-10">Cadastrar</TabsTrigger>
             </TabsList>
 
             {/* Login Tab */}
